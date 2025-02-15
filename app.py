@@ -33,7 +33,7 @@ st.write("Enter the details below to predict profitability.")
 # User input
 quantity = st.number_input("Quantity", min_value=1, max_value=int(df['Quantity'].max()), value=1)
 unit_price = st.number_input("Unit Price", min_value=float(df['Unit Price'].min()), max_value=float(df['Unit Price'].max()), value=float(df['Unit Price'].min()))
-total_sales = st.number_input("Total Sales", min_value=float(df['Total Sales'].min()), max_value=float(df['Total Sales'].max()), value=unit_price*quantity)
+total_sales = st.number_input("Total Sales", min_value=float(df['Total Sales'].min()), max_value=float(df['Total Sales'].max()), value=float(unit_price*quantity))
 
 region = st.selectbox("Region", df['Region'].unique())
 customer_type = st.selectbox("Customer Type", df['Customer Type'].unique())
